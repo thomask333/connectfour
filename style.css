@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+
+.square{
+display: inline-block;
+border: thick solid black;
+height: 50px;
+width: 50px;
+}
+.square1{
+border: thick solid black;
+height: 50px;
+width: 50px;
+float: clear;
+}
