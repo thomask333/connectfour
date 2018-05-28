@@ -1,6 +1,17 @@
 // JavaScript Document
 var pColor = "red";
 var player1 = true;
+var win1 = false;
+var win2 = false;
+var square = document.getElementsByClassName("square");
+for(var j =0; j < square.length; j++){
+	square[j].style.backgroundColor = "white";
+}
+function diagonal(aColor){
+	for(var i=0; i < square.length; i++){
+		console.log(i);
+	}
+}
 function changeColor(id){
 	if(player1 == true && document.getElementById(id).style.backgroundColor != "red" && document.getElementById(id).style.backgroundColor != "black"){
 	document.getElementById("message").innerHTML = "";
@@ -8,6 +19,7 @@ function changeColor(id){
 	document.getElementById(id).style.backgroundColor = pColor;
 	id.value = "red";
 	player1 = false;
+	diagonal(pColor);
 	document.getElementById("turn").innerHTML = "Player 2's Turn";
 	return player1;
 }
@@ -25,3 +37,7 @@ function changeColor(id){
 		document.getElementById("message").innerHTML = "Message: Choose another square!";
 	}
 }
+
+console.log(square.length);
+
+
